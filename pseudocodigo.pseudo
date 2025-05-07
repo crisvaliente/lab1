@@ -1,17 +1,12 @@
-
-
-// Declaración
+// Declaración de variables
 var
     Entero: cant_camisas, cant_pantalones, cant_zapatos, cant_medias, cant_gorros;
     Decimal: subtotal_camisas, subtotal_pantalones, subtotal_zapatos, subtotal_medias, subtotal_gorros;
     Decimal: descuento_camisas, descuento_pantalones, descuento_zapatos, descuento_medias, descuento_gorros;
     Decimal: total_con_descuento, total_descuentos, total_sin_descuentos;
-    Entero: grupos_camisas, grupos_pantalones, pares_zapatos, grupos_medias, pares_gorros;
+    Entero: grupos_pantalones, pares_zapatos, grupos_medias, pares_gorros;
 
-
-//Valores Iniciales de Precios
-
-
+// Constantes de precios
 const
     precio_camisa = 1200;
     precio_pantalones = 1600;
@@ -19,76 +14,75 @@ const
     precio_medias = 380;
     precio_gorro = 560;
 
-
-//Entrada de Datos
+// Entrada de Datos con validación
 Escribir ("Ingrese la cantidad de camisas:");
-Leer (cant_camisas);
-
+Repetir
+    Leer (cant_camisas);
+    Si (cant_camisas < 0) Entonces
+        Escribir ("Entrada incorrecta. Por favor, ingrese una cantidad válida de camisas:");
+    Fin Si
+Hasta Que (cant_camisas >= 0);
 
 Escribir ("Ingrese la cantidad de pantalones:");
-Leer (cant_pantalones);
-
+Repetir
+    Leer (cant_pantalones);
+    Si (cant_pantalones < 0) Entonces
+        Escribir ("Entrada incorrecta. Por favor, ingrese una cantidad válida de pantalones:");
+    Fin Si
+Hasta Que (cant_pantalones >= 0);
 
 Escribir ("Ingrese la cantidad de zapatos:");
-Leer (cant_zapatos);
-
+Repetir
+    Leer (cant_zapatos);
+    Si (cant_zapatos < 0) Entonces
+        Escribir ("Entrada incorrecta. Por favor, ingrese una cantidad válida de zapatos:");
+    Fin Si
+Hasta Que (cant_zapatos >= 0);
 
 Escribir ("Ingrese la cantidad de medias:");
-Leer (cant_medias);
-
+Repetir
+    Leer (cant_medias);
+    Si (cant_medias < 0) Entonces
+        Escribir ("Entrada incorrecta. Por favor, ingrese una cantidad válida de medias:");
+    Fin Si
+Hasta Que (cant_medias >= 0);
 
 Escribir ("Ingrese la cantidad de gorros:");
-Leer (cant_gorros);
+Repetir
+    Leer (cant_gorros);
+    Si (cant_gorros < 0) Entonces
+        Escribir ("Entrada incorrecta. Por favor, ingrese una cantidad válida de gorros:");
+    Fin Si
+Hasta Que (cant_gorros >= 0);
 
-
-
-
-// Calculo de los subtotales
+// Cálculo de los subtotales
 subtotal_camisas = cant_camisas * precio_camisa;
 subtotal_pantalones = cant_pantalones * precio_pantalones;
 subtotal_zapatos = cant_zapatos * precio_zapatos;
 subtotal_medias = cant_medias * precio_medias;
 subtotal_gorros = cant_gorros * precio_gorro;
 
-
-// Calculo de los descuentos
-// Descuento en Camisas: 10% en camisas
+// Cálculo de los descuentos
 descuento_camisas = subtotal_camisas * 0.10;
-
-
-// Descuento en Pantalones: 10% cada 3 pantalones
 grupos_pantalones = cant_pantalones DIV 3;
 descuento_pantalones = grupos_pantalones * 3 * precio_pantalones * 0.10;
-
-
-//Descuento en zapatos: 4% cada 2 pares de zapatos
 pares_zapatos = cant_zapatos DIV 2;
 descuento_zapatos = pares_zapatos * 2 * precio_zapatos * 0.04;
-
-
-//Descuento en Medias: 50% en el tercer par
 grupos_medias = cant_medias DIV 3;
 descuento_medias = grupos_medias * precio_medias * 0.5;
-
-
-//Descuento en Gorros: 8% cada 2 gorros:
 pares_gorros = cant_gorros DIV 2;
 descuento_gorros = pares_gorros * 2 * precio_gorro * 0.08;
 
-
-//Calculo de totales
+// Cálculo de totales
 total_sin_descuentos = subtotal_camisas + subtotal_pantalones + subtotal_zapatos + subtotal_medias + subtotal_gorros;
 total_descuentos = descuento_camisas + descuento_pantalones + descuento_zapatos + descuento_medias + descuento_gorros;
 total_con_descuento = total_sin_descuentos - total_descuentos;
 
-
-//Mostrar Resultados
-Escribir "Su compra es:" \n;
-Escribir  cant_camisas "Camisas -" subtotal_camisas, "Descuento:" descuento_camisas, "Total:" subtotal_camisas-descuento_camisas;
-Escribir  cant_pantalones "Pantalones -" subtotal_pantalones, "Descuento:" descuento_pantalones, "Total:" subtotal_pantalones-descuento_pantalones;
-Escribir  cant_zapatos "Zapatos -" subtotal_zapatos, "Descuento:" descuento_zapatos, "Total:" subtotal_zapatos-descuento_zapatos;
-Escribir  cant_medias "Medias -" subtotal_medias, "Descuento:" descuento_medias, "Total:" subtotal_medias-descuento_medias;
-Escribir  cant_gorros "Gorros -" subtotal_gorros, "Descuento:" descuento_gorros, "Total:" subtotal_gorros-descuento_gorros;
-
-
-Escribir "Total a pagar: $" total_con_descuento;
+// Mostrar Resultados
+Escribir "Su compra es:";
+Escribir cant_camisas, " Camisas - $", subtotal_camisas, ", Descuento: $", descuento_camisas, ", Total: $", subtotal_camisas - descuento_camisas;
+Escribir cant_pantalones, " Pantalones - $", subtotal_pantalones, ", Descuento: $", descuento_pantalones, ", Total: $", subtotal_pantalones - descuento_pantalones;
+Escribir cant_zapatos, " Zapatos - $", subtotal_zapatos, ", Descuento: $", descuento_zapatos, ", Total: $", subtotal_zapatos - descuento_zapatos;
+Escribir cant_medias, " Medias - $", subtotal_medias, ", Descuento: $", descuento_medias, ", Total: $", subtotal_medias - descuento_medias;
+Escribir cant_gorros, " Gorros - $", subtotal_gorros, ", Descuento: $", descuento_gorros, ", Total: $", subtotal_gorros - descuento_gorros;
+Escribir "Total a pagar: $", total_con_descuento;
