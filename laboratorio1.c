@@ -22,7 +22,7 @@ int main() {
             break;
         } else {
             while (getchar() != '\n'); // Limpiar buffer
-            printf("Entrada incorrecta. Por favor, ingrese una cantidad válida de camisas (número positivo): ");
+            printf("Entrada incorrecta. Por favor, ingrese una cantidad válida de camisas: ");
         }
     }
 
@@ -32,7 +32,7 @@ int main() {
               break;
        }else {
               while(getchar() != '\n'); // Limpiar buffer
-              printf("Entrada incorrecta. Por favor, ingrese una cantidad válida de pantalones");
+              printf("Entrada incorrecta. Por favor, ingrese una cantidad válida de pantalones:");
        }
     }
 
@@ -43,7 +43,7 @@ int main() {
               break;
        }else{
               while(getchar() != '\n'); // Limpiar buffer
-              printf("Entrada incorrecta. Por favor, ingrese una cantidad válida de zapatos");
+              printf("Entrada incorrecta. Por favor, ingrese una cantidad válida de zapatos:");
        }
     }
 
