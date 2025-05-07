@@ -17,19 +17,63 @@ int main() {
 
     // Entrada de datos
     printf("Ingrese la cantidad de camisas: ");
-    scanf("%d", &cant_camisas);
+    while (1) {
+        if (scanf("%d", &cant_camisas) == 1 && cant_camisas >= 0) {
+            break;
+        } else {
+            while (getchar() != '\n'); // Limpiar buffer
+            printf("Entrada incorrecta. Por favor, ingrese una cantidad válida de camisas (número positivo): ");
+        }
+    }
 
     printf("Ingrese la cantidad de pantalones: ");
-    scanf("%d", &cant_pantalones);
+    while(1){
+       if(scanf("%d", &cant_pantalones) == 1 && cant_pantalones >= 0) {
+              break;
+       }else {
+              while(getchar() != '\n'); // Limpiar buffer
+              printf("Entrada incorrecta. Por favor, ingrese una cantidad válida de pantalones");
+       }
+    }
 
+  
     printf("Ingrese la cantidad de zapatos: ");
-    scanf("%d", &cant_zapatos);
+    while (1){
+       if (scanf("%d", &cant_zapatos) == 1 && cant_zapatos >= 0){
+              break;
+       }else{
+              while(getchar() != '\n'); // Limpiar buffer
+              printf("Entrada incorrecta. Por favor, ingrese una cantidad válida de zapatos");
+       }
+    }
 
-    printf("Ingrese la cantidad de medias: ");
-    scanf("%d", &cant_medias);
+    
 
-    printf("Ingrese la cantidad de gorros: ");
-    scanf("%d", &cant_gorros);
+printf("Ingrese la cantidad de medias:");
+while(1){
+       if(scanf("%d", &cant_medias) == 1 && cant_medias >= 0){
+              break;
+       }else{
+              while(getchar() != '\n'); // Limpiar buffer
+              printf("Entrada incorrecta. Por favor, ingrese una cantidad válida de medias");
+       }
+}
+
+
+
+
+printf("Ingrese la cantidad de gorros: ");
+while(1){
+       if(scanf("%d", &cant_gorros) == 1 && cant_gorros >= 0){
+              break;
+       }else{
+              while(getchar() != '\n'); // Limpiar buffer
+              printf("Entrada incorrecta. Por favor, ingrese una cantidad válida de gorros");
+       }
+}
+
+
+
 
     // Cálculo de subtotales
     subtotal_camisas = cant_camisas * precio_camisa;
