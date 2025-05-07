@@ -55,7 +55,7 @@ while(1){
               break;
        }else{
               while(getchar() != '\n'); // Limpiar buffer
-              printf("Entrada incorrecta. Por favor, ingrese una cantidad válida de medias");
+              printf("Entrada incorrecta. Por favor, ingrese una cantidad válida de medias:");
        }
 }
 
@@ -68,7 +68,7 @@ while(1){
               break;
        }else{
               while(getchar() != '\n'); // Limpiar buffer
-              printf("Entrada incorrecta. Por favor, ingrese una cantidad válida de gorros");
+              printf("Entrada incorrecta. Por favor, ingrese una cantidad válida de gorros:");
        }
 }
 
