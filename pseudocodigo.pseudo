@@ -16,44 +16,44 @@ const
 
 // Entrada de Datos con validación
 Escribir ("Ingrese la cantidad de camisas:");
-Repetir
+Mientras cant_camisas < 0 haga
     Leer (cant_camisas);
-    Si (cant_camisas < 0) Entonces
+    Si cant_camisas < 0 Entonces
         Escribir ("Entrada incorrecta. Por favor, ingrese una cantidad válida de camisas:");
     Fin Si
-Hasta Que (cant_camisas >= 0);
+Fin Mientras
 
 Escribir ("Ingrese la cantidad de pantalones:");
-Repetir
+Mientras cant_pantalones < 0 haga
     Leer (cant_pantalones);
-    Si (cant_pantalones < 0) Entonces
+    Si cant_pantalones < 0 Entonces
         Escribir ("Entrada incorrecta. Por favor, ingrese una cantidad válida de pantalones:");
     Fin Si
-Hasta Que (cant_pantalones >= 0);
+Fin Mientras
 
 Escribir ("Ingrese la cantidad de zapatos:");
-Repetir
+Mientras cant_zapatos < 0 haga
     Leer (cant_zapatos);
-    Si (cant_zapatos < 0) Entonces
+    Si cant_zapatos < 0 Entonces
         Escribir ("Entrada incorrecta. Por favor, ingrese una cantidad válida de zapatos:");
     Fin Si
-Hasta Que (cant_zapatos >= 0);
+Fin Mientras
 
 Escribir ("Ingrese la cantidad de medias:");
-Repetir
+Mientras cant_medias < 0 haga
     Leer (cant_medias);
-    Si (cant_medias < 0) Entonces
+    Si cant_medias < 0 Entonces
         Escribir ("Entrada incorrecta. Por favor, ingrese una cantidad válida de medias:");
     Fin Si
-Hasta Que (cant_medias >= 0);
+Fin Mientras
 
 Escribir ("Ingrese la cantidad de gorros:");
-Repetir
+Mientras cant_gorros < 0 haga
     Leer (cant_gorros);
-    Si (cant_gorros < 0) Entonces
+    Si cant_gorros < 0 Entonces
         Escribir ("Entrada incorrecta. Por favor, ingrese una cantidad válida de gorros:");
     Fin Si
-Hasta Que (cant_gorros >= 0);
+Fin Mientras
 
 // Cálculo de los subtotales
 subtotal_camisas = cant_camisas * precio_camisa;
